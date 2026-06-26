@@ -215,7 +215,7 @@
     background:#e8f0fe;border:1px solid #cfe0fb;border-radius:999px;padding:4px 13px}
 
   /* ===== Slide : dev flow ===== */
-  .flowstrip{position:absolute;top:128px;left:64px;right:64px;display:flex;align-items:stretch}
+  .flowstrip{position:absolute;top:116px;left:64px;right:64px;display:flex;align-items:stretch}
   .fstep{flex:1;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);
     padding:22px 10px;text-align:center;position:relative}
   .fstep+.fstep{margin-left:26px}
@@ -224,9 +224,11 @@
   .fstep .fic{font-size:33.6px}
   .fstep .ft{margin-top:10px;font-size:18px;font-weight:800;line-height:1.32;color:var(--ink);min-height:2.64em;display:flex;align-items:center;justify-content:center;text-align:center}
   .fstep .who{display:inline-block;margin-top:12px;font-size:13.8px;font-weight:800;padding:3px 13px;border-radius:999px}
-  .who.ai{color:var(--ai);background:var(--ai-bg);border:1px solid var(--ai-bd)}
-  .who.hu{color:var(--hu);background:var(--hu-bg);border:1px solid var(--hu-bd)}
-  .case{position:absolute;top:304px;left:64px;right:64px;bottom:90px;background:var(--card);border:1px solid var(--line);
+  .who.ai{color:#fff;background:var(--ai);border:1px solid var(--ai)}
+  .who.hu{color:#fff;background:var(--hu);border:1px solid var(--hu)}
+  .fstep:has(.who.ai){background:var(--ai-bg);border-color:var(--ai-bd)}
+  .fstep:has(.who.hu){background:var(--hu-bg);border-color:var(--hu-bd)}
+  .case{position:absolute;top:320px;left:64px;right:64px;bottom:76px;background:var(--card);border:1px solid var(--line);
     border-left:5px solid var(--blue);border-radius:16px;box-shadow:var(--shadow);padding:0 36px;
     display:flex;flex-direction:column;justify-content:center}
   .case .ct{font-size:21.6px;font-weight:850;color:var(--ink);margin-bottom:36px;
@@ -330,7 +332,7 @@
       <div class="hsub">사람이 매번 하던 일을, AI 루틴으로</div>
     </div>
     <div class="ba">
-      <div class="half before"><div class="lab">기존의 불편함</div><div class="t">코드 점검, 주간보고, 기획↔화면 대조를 <b>매번 사람이</b> — 놓치고 품질이 들쭉날쭉</div></div>
+      <div class="half before"><div class="lab">기존의 불편함</div><div class="t"><b>사람이 매번 직접</b> 코드 점검·주간보고·기획↔화면 대조 — 놓치고 품질도 들쭉날쭉</div></div>
       <div class="arr">→</div>
       <div class="half after"><div class="lab">AI로 해결</div><div class="t"><b>규칙은 한 번만</b> 정해두면, AI가 매일·매주·실시간 알아서 처리</div></div>
     </div>
