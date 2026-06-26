@@ -175,6 +175,7 @@
   .tile .cap .tag.ai{background:var(--ai)}
   .tile .cap .ct{font-size:17.4px;font-weight:750;letter-spacing:-.2px}
   .tile .tbody{flex:1;position:relative;padding:14px 18px;overflow:hidden}
+  .tbody.audit{display:flex;flex-direction:column;justify-content:center}
   .audit .top{font-size:15.6px;font-weight:750;color:var(--ink2);margin-bottom:9px}
   .audit .top b{color:var(--blue)}
   .audit table{width:100%;border-collapse:collapse}
@@ -403,11 +404,9 @@
       <div class="tile">
         <div class="cap"><span class="tag ai">AI 검증</span><span class="ct">API 정합성 자동 점검 — 응답 ↔ 화면 대조</span></div>
         <div class="tbody audit">
-          <div class="top">AI가 <b>API 응답</b>과 <b>실제 화면</b>을 한꺼번에 대조해 ‘빠진 것·다른 것’을 자동 검출</div>
           <table>
             <tr><th>점검 항목</th><th>API 응답</th><th>화면 표시</th><th>판정</th></tr>
             <tr><td>기상현황 위젯</td><td class="api">25° / 90%</td><td class="api">mock 23°/58%</td><td class="warn">⚠ 불일치</td></tr>
-            <tr><td>단지 데이터 격리</td><td class="api">해당 단지만</td><td class="api">해당 단지만</td><td class="ok">✓ 일치</td></tr>
             <tr><td>목록 필터(스테이지)</td><td class="api">타 단지 노출</td><td class="api">—</td><td class="bad">✗ 미배포</td></tr>
           </table>
           <div class="auditnote">사람이 놓치기 쉬운 정합성 갭을 AI가 사전 검출 → 사람은 정책 결정만</div>
@@ -421,8 +420,7 @@
             <div class="mn-head"><span class="mn-bot">🤖</span> 코드점검 봇 <span class="mn-time">오전 9:00</span></div>
             <div class="mn-line"><b>오늘의 코드 개선 제안 (1건)</b></div>
             <div class="mn-line">· <span class="mono">gdx-client</span> · 타입 누락 <span class="g">13곳</span></div>
-            <div class="mn-line">· 영향도 점수 <span class="g">104</span> <span class="dim">(가장 임팩트 큰 1건)</span></div>
-            <div class="mn-foot">⏰ 묻지 않아도 매일 9시 자동 도착 · 누적 <b>278건</b></div>
+            <div class="mn-foot">⏰ 매일 9시 자동 도착 · 누적 <b>278건</b></div>
           </div>
         </div>
       </div>
@@ -433,7 +431,7 @@
           <div class="artifact">
             <div class="aic">🧾</div>
             <div class="at">API 스펙 자동 문서화 (/spec)</div>
-            <div class="ad">엔드포인트·요청/응답 규격을 AI가 초안 작성하고, 사람이 검수해 외부 전달용 스펙으로 확정</div>
+            <div class="ad">엔드포인트·요청/응답 규격을 AI가 초안 작성 → 사람이 검수해 확정</div>
             <button class="demo" data-go="10">🔎 자세히 보기 <span class="ar">›</span></button>
           </div>
         </div>
@@ -445,7 +443,7 @@
           <div class="artifact">
             <div class="aic">🖥️</div>
             <div class="at">광고관리 운영 화면</div>
-            <div class="ad">메인배너·팝업·전시 등 반복 구조의 관리 화면을 AI로 빠르게 구현 → 사람은 동작 검증</div>
+            <div class="ad">반복 구조의 관리 화면(배너·팝업·전시)을 AI로 구현 → 사람은 동작 검증</div>
             <button class="demo" data-go="11">🔎 자세히 보기 <span class="ar">›</span></button>
           </div>
         </div>
